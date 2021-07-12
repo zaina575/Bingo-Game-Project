@@ -1,0 +1,50 @@
+Problem we are solving: creating a Bingo game
+
+
+
+Use the main method as the client program.
+Call all methods in the main method.
+Create an ArrayList for storing the random numbers and an Array that has dimension of 5 by 5 for the bingo card.
+The main method will call the print out method, print out card, and play game methods.
+
+
+Create five methods:
+
+1. I will create a method to fill up the bingo card using the input file "bingo.in"
+2. I will create a method that will print out the card where all the things in the board will line up.
+3. I will create a method to generate a random number that does not repeat itself.
+4. I will create a method that will contain the main actions of the game (other methods will be called).
+5. I will create a method to check to see if there is a win and how the player won the game.
+
+
+
+
+
+
+In the fillCard method, I will use a Scanner object to import the file into the bingo card. The Scanner will receive input by using 
+nextInt().The bingoCard array will be passed as a parameter.
+
+
+In the printCard method, I will use a print statement to print out "YOUR BINGO CARD:" , the word BINGO, and the dashed line underneath. 
+Then, I will create a for loop that will allow me to iterate through the bingo card array. I will start printing out the "|" and then use an if/else statement to determine if to print the numbers or an X. The if statement will be if the bingocard's currrent position equals zero,
+print an "X". The else statement will just print the card normally with the numbers. After every row is printed, it will create the dashed
+line underneath. This process will continue till it iterates through the whole for loop. The bingoCard array will be passed as a parameter.
+
+In the randomnumber method,the bingoCard array and the ArrayList that stores random numbers will be passed. I will create an integer 
+that stores a random number. It will go through the ArrayList and see if that random number is already in the ArrayList using a while loop.
+Once, a random number is created it will be added to the ArrayList. It will go through the bingoCard using a for loop and see if that number is on the card. If the number is on the card, the value will be changed to zero.
+
+
+In the playGame method, the ArrayList of random numbers and the array BingoCard will be passed. Using a while loop, I will check to see if 
+there is a win. The while loop will keep generating random numbers till a win is found. The while loop will call the checkForWin method. 
+Then, I will put an if statement just to make sure that checkForWin actually is a win. Then, it will start printing out the random numbers 
+from the bin, what type of win, and the number of picks. I will use a switch statement to determine what to print depending on what the win
+equals to.
+
+
+In the checkForWin method, I will create constants using integers to determine what tyoe of win it is and create a sum variable. I will
+have four different sets of four loop for each type of win. For the horizontal check, I will nest the if the sum is zero condition after eachinner loop is processed. I will do something similar for the vertical check. For the diagonal checks, I will create a variable to ensure
+that the for loop for the diagonals actually iterates through the whole diagonal. There will be return statements within each for loop 
+corresponding to the appropriate type of win. If no win is found, then it will return NOWIN where the value is zero. The bingoCard will
+be passed as a parameter.
+
